@@ -8,16 +8,16 @@ angular.module('DukeUniversityUnion.controllers.Events', []).controller('EventsC
   		location: 'University Center'
   	},
   	{
-  		title: 'Small Town Records Meetup',
-  		description: 'Come sit in on a recording session at Small Town Records',
+  		title: 'Watermelon Eating Contest',
+  		description: 'Come fight breast cancer by competing with others to eat the most watermelon at DU Medical Center',
   		time: new Date(),
-  		location: 'University Center'
+  		location: 'DU Medical Center'
   	},
   	{
-  		title: 'Small Town Records Meetup',
-  		description: 'Come sit in on a recording session at Small Town Records',
+  		title: 'Hayman Capital Management Talk',
+  		description: 'Come hear about Japan\'s economic problems',
   		time: new Date(),
-  		location: 'University Center'
+  		location: 'Schaefer Hall'
   	}
   ];
 });

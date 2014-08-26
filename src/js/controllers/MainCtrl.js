@@ -1,14 +1,9 @@
-angular.module('DukeUniversityUnion.controllers.Main', [
-  'DukeUniversityUnion.services.Geolocation',
-  'DukeUniversityUnion.services.Forecast'
-  ]).controller('MainController', function($scope, getCurrentPosition, getWeather){
-  getCurrentPosition(function(position){
-    getWeather(
-      position.coords.latitude, 
-      position.coords.longitude, 
-      function(location, weather){
-        $scope.location = location;
-        $scope.weather = weather;
-      });
+angular.module('DukeUniversityUnion.controllers.Main', []).controller('MainController', function ($rootScope) {
+    $rootScope.$on("$routeChangeStart", function () {
+      $rootScope.routing = true;
+      $rootScope.loading = false;
+    });
+    $rootScope.$on("$routeChangeSuccess", function () {
+      $rootScope.routing = false;
+    });
   });
-});

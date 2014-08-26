@@ -7,7 +7,8 @@ angular.module('DukeUniversityUnion.services.Forecast', [])
           done(data.name, data.weather[0].description);
         })
         .error(function(data, status, headers, config) {
-          throw new Error('Unable to get weather');
+        	done('Durham, NC', 'Partly cloudy')
+          //throw new Error('Unable to get weather');
         });
   };
 });
